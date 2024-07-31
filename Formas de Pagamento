@@ -1,0 +1,48 @@
+# elabore um programa q calcule o valor a ser pago por um produto onsiderando seu o
+#PREÇO NORMAL, E CONDIÇAO DE PAGAMENTO:
+# a vista ou cheque 10% de desconto.
+# a vista no cartao de credito 5% de desconto.
+#parcelado 2x nao tero cobrança.
+# 3x ou mais no cartao tera 20% de juros.
+
+
+
+produtos=['tenis','chinelo','mochila']
+print(f'Qual  desses produtos gostaria de comprar {produtos} ')
+nome= input('')
+
+formas_de_pagamento =['avista','avista_cartao','parcelado_em_2x','parcelas_3x' ]
+
+avisa_ou_cheque = 10*200/100
+avista = 200-avisa_ou_cheque
+
+avista_no_cartao_de_credito =5*200/100
+avista_cartao= 200-avista_no_cartao_de_credito
+
+parcelado_em_2x = 200/2
+
+parcelado_3x = 20*200/100
+parcelas_3x=(200+parcelado_3x)/3
+
+
+print(f'Qual vai ser a forma de pagamento ? {formas_de_pagamento}')
+
+f = str(input(''))
+
+if f == 'avista':
+    print(f'O produto saira por R${avista} reais')
+
+
+elif f == 'avista_cartao':
+    print(f'saira por {avista_cartao}')
+
+elif f == 'parcelado_em_2x':
+    print(f'Sera em duas vezes R${parcelado_em_2x} reais')
+
+elif f =='parcelas_3x':
+    print(f'Tera juros nas parcelas e cada uma saira por R${parcelas_3x} reais')
+
+else:
+    print('Forma de pegamento invalida Por favor escolha uma das opcoes de pagamento abaixo')
+    print(f'Qual vai ser a forma de pagamento ? {formas_de_pagamento}')
+
